@@ -1,4 +1,5 @@
-const num = Math.floor(Math.random() * 6);
+const num = Math.floor(Math.random() * 5);
+const days = ["monday", "tuesday", "wednesday", "thursday", "friday"];
 
 switch (num) {
   case 1: 
@@ -13,9 +14,23 @@ switch (num) {
   case 4: 
     console.log("4");
     break;
-  case 5: 
-    console.log("5");
-    break;
   default:
     console.log("0")
 };
+
+switch (days[num]) {
+  case "monday":
+    console.log("Monday");
+    break;
+  case "tuesday":
+    console.log("Tuesday");
+    break;
+  case "wednesday":
+    console.log("Wednesday");
+    break;
+  case "thursday":
+    console.log("Thursday");
+    break;
+  default:
+    console.log("Friday");
+}
