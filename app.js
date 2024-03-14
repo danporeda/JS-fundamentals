@@ -204,15 +204,19 @@ const movies = [
 // console.log(getAverage(prices));
 
 
-const person = {
-  firstName: 'Viggy',
-  lastName: 'Mortenson',
-  fullName: function () {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  shoutName: function () {
-    setTimeout(() => {
-      console.log(this.fullName());
-    }, 3000)
-  }
-}
+// const person = {
+//   firstName: 'Viggy',
+//   lastName: 'Mortenson',
+//   fullName: function () {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   shoutName: function () {
+//     setTimeout(() => {
+//       console.log(this.fullName());
+//     }, 3000)
+//   }
+// }
+
+const nums = [2,4,8,5,5,545,76,89,54,12,4,];
+
+console.log(Math.max(...nums));
