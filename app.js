@@ -187,18 +187,32 @@ const movies = [
 // const goodTitles = movies.filter(mov => mov.score > 90).map(mov => mov.title);
 // console.log(`good titles: ${goodTitles}`);
 
-const prices = [9.99, 1.50, 19.99, 49.99, 30.50];
+// const prices = [9.99, 1.50, 19.99, 49.99, 30.50];
 
-const total = prices.reduce((acc, curr) => acc + curr, 0);
-console.log(`total: ${total}`);
+// const total = prices.reduce((acc, curr) => acc + curr, 0);
+// console.log(`total: ${total}`);
 
-const manTotal = 9.99 + 1.50 + 19.99 + 49.99 + 30.50;
-console.log(manTotal);
+// const manTotal = 9.99 + 1.50 + 19.99 + 49.99 + 30.50;
+// console.log(manTotal);
 
-const getAverage = (numberArray) => {
-  const total = prices.reduce((acc, curr) => acc + curr, 0);
-  return total / numberArray.length;
+// const getAverage = (numberArray) => {
+//   const total = prices.reduce((acc, curr) => acc + curr, 0);
+//   return total / numberArray.length;
+// }
+
+// console.log("average:");
+// console.log(getAverage(prices));
+
+
+const person = {
+  firstName: 'Viggy',
+  lastName: 'Mortenson',
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  shoutName: function () {
+    setTimeout(() => {
+      console.log(this.fullName());
+    }, 3000)
+  }
 }
-
-console.log("average:");
-console.log(getAverage(prices));
