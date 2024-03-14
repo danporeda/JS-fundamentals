@@ -124,7 +124,7 @@
 
 // FOREACH---------
 
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+// const numbers = [1,2,3,4,5,6,7,8,9,10];
 
 const movies = [
   {
@@ -134,13 +134,18 @@ const movies = [
   },
   {
     title: "Alien",
-    score: 90,
+    score: 89,
     year: 2006
   },
   {
     title: "Pulp Fiction",
     score: 98,
     year: 1995
+  },
+  {
+    title: "Gunter Toody",
+    score: 83,
+    year: 2019
   }
 ];
 
@@ -217,6 +222,74 @@ const movies = [
 //   }
 // }
 
-const nums = [2,4,8,5,5,545,76,89,54,12,4,];
+// const nums = [2,4,8,5,5,545,76,89,54,12,4,];
 
-console.log(Math.max(...nums));
+// const dogs = ['fido', 'gilda'];
+// const cats = ['shrek', 'constance', 'eric'];
+// const allPets = [...dogs, ...cats];
+
+// console.log(Math.max(...nums));
+
+// const foxes = {
+//   isFurry: true,
+//   terrain: 'land',
+//   food: 'rabbits',
+//   curiosity: 'high'
+// }
+
+// const whales = {
+//   isFurry: false,
+//   terrain: 'water',
+//   food: 'plankton',
+//   swims: true
+// }
+
+// console.log({...foxes, ...whales});
+
+
+
+//******* arguments WORKS */
+// function sumAll () {
+//   let total = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   return total;
+// }
+
+//********* arguments DOESNT WORK IN ARROW FUNCTIONS */
+// const sumAll = () => {
+//   let total = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   return total;
+// }
+
+//***  DESTRUCTURING */
+
+// const scores = [1234, 2443, 34554, 5443, 654];
+
+// let [gold, silver] = scores;
+
+// const user = {
+//   email: 'guntherToody@gmail',
+//   password: 'trcktunt',
+//   firstName: 'Havey',
+//   lastName: 'Gunther',
+//   born: 1955,
+//   died: 2010,
+//   city: 'San Francisco',
+//   state: 'California'
+// };
+
+// const { firstName: first, lastName: last, city, state } = user;
+
+// console.log(`${first} ${last} from ${city} ${state}`);
+
+
+// const bestMovies = movies.map(({score}) => {
+//   if (score >= 90) {
+//     return 'yes';
+//   } else {return 'no';}
+// });
