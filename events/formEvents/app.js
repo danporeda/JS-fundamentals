@@ -22,4 +22,11 @@ const addNewCat = (newCatname, gender) => {
   document.querySelectorAll('input')[1].value = "";
 }
 
-
+catName.addEventListener('input', (e) => {
+  console.log(e);
+  if (e.data === '!') {
+    console.log(catName.value);
+  } else {
+    console.log(e.data);
+  }
+})
