@@ -20,10 +20,10 @@ const displayScore = () => {
   p2.display.innerText = p2.score;
 };
 
-const setScore = (player) => {
+const setScore = (player, opponent) => {
   if (!isGameOver) {
     player.score +=1;
-    if (player.score === winningScore) {
+    if (player.score >= winningScore && player.score > opponent.score + 1) {
       isGameOver = true;
       setColors();
     }
@@ -62,11 +62,11 @@ const reset = () => {
 };
 
 p1.button.addEventListener('click', () => {
- setScore(p1);
+ setScore(p1, p2);
 });
 
 p2Button.addEventListener('click', function() {
-  setScore(p2);
+  setScore(p2, p1);
 });
 
 winningScoreSelect.addEventListener('change', function() {
