@@ -103,16 +103,35 @@ const delayedColorChange = (color, delay) => {
   })
 }
 
-delayedColorChange('red', 1000)
-  .then(() => delayedColorChange('orange', 1000))
-  .then(() => delayedColorChange('yellow', 1000))
-  .then(() => delayedColorChange('green', 1000))
-  .then(() => delayedColorChange('teal', 1000))
-  .then(() => delayedColorChange('blue', 1000))
-  .then(() => delayedColorChange('indigo', 1000))
-  .then(() => delayedColorChange('purple', 1000))
-  .then(() => delayedColorChange('violet', 1000))
-  .catch((err) => 'fuck off mate');
+// const rainbow = delayedColorChange('red', 1000)
+//   .then(() => delayedColorChange('orange', 1000))
+//   .then(() => delayedColorChange('yellow', 1000))
+//   .then(() => delayedColorChange('green', 1000))
+//   .then(() => delayedColorChange('teal', 1000))
+//   .then(() => delayedColorChange('blue', 1000))
+//   .then(() => delayedColorChange('indigo', 1000))
+//   .then(() => delayedColorChange('purple', 1000))
+//   .then(() => delayedColorChange('violet', 1000))
+//   .catch((err) => 'fuck off mate');
+
+const rainbow = async (num) => {
+  for (let i = 0; i < num; i++) {
+    await delayedColorChange('red', 500)
+    await delayedColorChange('orange', 500)
+    await delayedColorChange('yellow', 500)
+    await delayedColorChange('green', 500)
+    await delayedColorChange('teal', 500)
+    await delayedColorChange('blue', 500)
+    await delayedColorChange('indigo', 500)
+    await delayedColorChange('purple', 500)
+    await delayedColorChange('violet', 500)
+  }
+};
+
+async function printRainbow(num) {
+  await rainbow(num);
+  console.log('All finished fucktudd');
+};
 
   const login = async (username, password) => {
     if(!username || !password) throw 'missing username or password';
@@ -120,4 +139,15 @@ delayedColorChange('red', 1000)
 
   }
 
-  login('jack', 'shucko');
+// rainbow(3).then(() => console.log('All Done!!'));
+
+async function makeTwoRequests(url1, url2) {
+  try {
+    let data1 = await fakeRequestPromise(url1);
+    console.log(data1);
+    let data2 = await fakeRequestPromise(url2);
+    console.log(data2);
+  } catch(err) {
+    console.log(`fuck out my face mate: ${err}`);
+  }
+}
