@@ -113,3 +113,11 @@ delayedColorChange('red', 1000)
   .then(() => delayedColorChange('purple', 1000))
   .then(() => delayedColorChange('violet', 1000))
   .catch((err) => 'fuck off mate');
+
+  const login = async (username, password) => {
+    if(!username || !password) throw 'missing username or password';
+    return console.log('logged in, buttfucko! \n', `username: ${username}, password: ${password}`);
+
+  }
+
+  login('jack', 'shucko');
