@@ -69,27 +69,47 @@ const fakeRequestPromise = (url) => {
 //   console.log('nope')
 // })
 
-fakeRequestPromise('yelp.com/api/coffee/page1')
-  .then((data) => {
-    console.log('it worked (page 1)')
-    console.log(data)
-    return fakeRequestPromise('yelp.com/api/coffee/page2')
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//   .then((data) => {
+//     console.log('it worked (page 1)')
+//     console.log(data)
+//     return fakeRequestPromise('yelp.com/api/coffee/page2')
+//   })
+//   .then((data) => {
+//     console.log('it worked (page 2)')
+//     console.log(data)
+//     return fakeRequestPromise('yelp.com/api/coffee/page3')
+//   })
+//   .then((data) => {
+//     console.log('it worked (page 3)')
+//     console.log(data)
+//     return fakeRequestPromise('yelp.com/api/coffee/page4')
+//   })
+//   .then((data) => {
+//     console.log('it worked (page 4)')
+//     console.log(data)
+//   })
+//   .catch((err) => {
+//     console.log('failed.')
+//     console.log(err)
+//   })
+
+const delayedColorChange = (color, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay)
   })
-  .then((data) => {
-    console.log('it worked (page 2)')
-    console.log(data)
-    return fakeRequestPromise('yelp.com/api/coffee/page3')
-  })
-  .then((data) => {
-    console.log('it worked (page 3)')
-    console.log(data)
-    return fakeRequestPromise('yelp.com/api/coffee/page4')
-  })
-  .then((data) => {
-    console.log('it worked (page 4)')
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log('failed.')
-    console.log(err)
-  })
+}
+
+delayedColorChange('red', 1000)
+  .then(() => delayedColorChange('orange', 1000))
+  .then(() => delayedColorChange('yellow', 1000))
+  .then(() => delayedColorChange('green', 1000))
+  .then(() => delayedColorChange('teal', 1000))
+  .then(() => delayedColorChange('blue', 1000))
+  .then(() => delayedColorChange('indigo', 1000))
+  .then(() => delayedColorChange('purple', 1000))
+  .then(() => delayedColorChange('violet', 1000))
+  .catch((err) => 'fuck off mate');
