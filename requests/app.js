@@ -103,9 +103,14 @@ const p = document.querySelector('#data');
 const button = document.querySelector('#getJoke');
 
 const getDadJoke = async () => {
-  const config = {headers: {Accept: 'application/json'}};
-  const res = await axios.get('https://icanhazdadjoke.com/', config);
-  return res.data.joke;
+  try {
+    const config = {headers: {Accept: 'application/json'}};
+    const res = await axios.get('https://icanhazdadjoke.com/', config);
+    return res.data.joke;
+  } catch (e) {
+    console.log('error: ', e);
+    return 'No Jokes Available!!';
+  }
 }
 const addNewJoke = async () => {
   const joke = await getDadJoke();
