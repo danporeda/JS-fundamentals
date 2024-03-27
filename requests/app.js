@@ -86,3 +86,32 @@ const axiosStarWars = async (num) => {
     }
   }
 }
+
+// const btcUsd = async () => {
+//   const res = await axios.get('https://api.cryptonator.com/api/btc-usd/ticker');
+//   console.log(res.data);
+// }
+
+// const url = 'https://api.cryptonator.com/api/btc-usd/ticker';
+
+// fetch(url)
+//   .then(response => response.json())
+//   .then(data => console.log(data.ticker))
+//   .catch(e => console.log('error', e));
+
+const p = document.querySelector('#data');
+const button = document.querySelector('#getJoke');
+
+const getDadJoke = async () => {
+  const config = {headers: {Accept: 'application/json'}};
+  const res = await axios.get('https://icanhazdadjoke.com/', config);
+  return res.data.joke;
+}
+const addNewJoke = async () => {
+  const joke = await getDadJoke();
+  const newJoke = document.createElement('p');
+  newJoke.innerText = joke;
+  p.appendChild(newJoke);
+}
+
+button.addEventListener('click', addNewJoke);
