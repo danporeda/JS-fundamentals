@@ -1,14 +1,29 @@
 img {
   display: block;
-  border-radius: 50%;
 }
 
-img:hover {
+.pokemon:hover {
   background-color: red;
 }
 
 .pokemon {
   display: inline-block;
   text-align: center;
+  border-radius: 50%;
+}
+
+#header {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  margin-bottom: 50px;
+  border: 2px solid rgb(0, 62, 220);
+  background: lightblue;
+  border-radius: 30%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 

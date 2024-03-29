@@ -4,7 +4,8 @@ body {
 }
 
 h1 {
-  color: olive
+  color: olive;
+  text-align: center;
 }
 
 .purple{

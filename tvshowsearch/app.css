@@ -1,0 +1,12 @@
+.noImg {
+  display: inline-flex;
+  width: 210px;
+  height: 295px;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: teal;
+}
+
+.elCont {
+  display: grid;
+}

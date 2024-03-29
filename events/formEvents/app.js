@@ -30,3 +30,30 @@ catName.addEventListener('input', (e) => {
     console.log(e.data);
   }
 })
+
+const randoNum = () => {
+  return Math.floor(Math.random() * 256);
+};
+const makeColor = () => {
+  const r = randoNum();
+  const g = randoNum();
+  const b = randoNum();
+  return `rgb(${r},${g},${b})`;
+};
+
+const container = document.querySelector('#container');
+const changeButton = document.querySelector('#changeColor');
+const sup = document.querySelector('#super');
+
+sup.addEventListener('click', function() {
+  container.classList.toggle('hide');
+});
+
+changeButton.addEventListener('click', function(e) {
+  container.style.backgroundColor = makeColor();
+  e.stopPropagation();
+})
+
+catList.addEventListener('click', (e) => {
+  e.target.nodeName === 'LI' && e.target.remove();
+})

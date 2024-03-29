@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Score Keeper</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <style>
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <section class="section">
@@ -15,14 +23,14 @@
             <header class="card-header">
               <p class="card-header-title is-centered">Ping Pong Score Keeper</p>
             </header>
-            <div class="card-content">
+            <div class="card-content ">
               <div class="content">
                 <h1 class="title is-1"><span id="p1Score"></span> to <span id="p2Score"></span></h1>
                 <p class="subtitle">Use the buttons below to keep score</p>
 
                 <label for="playto" class="label is-large is-inline">(win by 2) Play To:</label>
                 <div class="select is-rounded">
-                  <select name="playto" id="playto">
+                  <select name="playto" id="playto" class="is-centered">
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
