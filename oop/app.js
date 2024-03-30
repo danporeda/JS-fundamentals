@@ -3,4 +3,6 @@ function Car(a, b, c) {
   this.b = b;
   this.c = c;
 }
-
+ Car.prototype.sayHello = () => {
+  console.log('hello');
+ }
