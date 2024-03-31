@@ -19,7 +19,7 @@ img {
   margin-bottom: 50px;
   border: 2px solid rgb(0, 62, 220);
   background: lightblue;
-  border-radius: 30%;
+  border-radius: 30px;
 }
 
 .container {
@@ -30,9 +30,12 @@ img {
 .player {
   width: 40%;
   height: 500px;
-  background: green;
+  background-color: green;
+  display: flex;
 }
 
 .playerBoard {
+  display: flex;
+  width: 90%;
   justify-content: space-evenly;
 }
